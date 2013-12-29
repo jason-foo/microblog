@@ -1,0 +1,23 @@
+<% include layout_header %>
+
+    <% if (!user) { %>
+      <div class="hero-unit">
+	<h1>Welcome to Microblog</h1>
+	<p>Microblog is a micro blog system based on Node.js.</p>
+	<p>
+	  <a class="btn btn-primary btn-large" href="/login">登录</a>
+	  <a class="btn btn-large" href="/reg">立即注册</a>
+	</p>
+      </div>
+    <% } else { %>
+      <%- partial('say') %>
+    <% } %>
+    <% include posts %>
+
+      <hr />
+<% include layout_footer %>
+    </div>
+  </body>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</html>
